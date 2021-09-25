@@ -53,7 +53,7 @@ table {
 /* CSS */
 html, body {
   font-family: 'Graphik', sans-serif;
-  background-color: var(--colour-primary-shade2);
+  background-color: var(--colour-primary-shade1);
   max-width: 428px;
   min-width: 428px;
   min-height: 926px;
@@ -216,6 +216,8 @@ i {
   float: right;
 }
 
+
+
 .btn-primary:hover{
   background: var(--colour-accent-shade2);
 }
@@ -227,7 +229,7 @@ i {
   height: 5rem; 
   bottom: 0;
   position: fixed;
-  width: 100%;
+  max-width: 428px;
   vertical-align: middle;
   z-index: 999;
   border-top: var(--width-primary) solid var(--colour-black);
@@ -235,19 +237,33 @@ i {
 
 .search-bar{
   height: 5rem; 
-  width: 100%;
-  overflow: hidden;
+  width: 428px;
   background-color: var(--colour-primary-shade1);
   float: left;
-  display: block;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   bottom: 5rem;
   position: fixed;
+  
 }
 
 .search-bar input[type=text] {
+  background-color: var(--colour-primary-shade2);
+  margin-top: 1rem;
   width: 100%;
+  height: 2.8rem;
   float: left;
-  padding: 2rem 2rem;
-  border: none;
+  border: 1px;
   font-size: 17px;
+  border-radius: 1.625rem;
+  padding: 0 3.5rem 0 1.5rem;
+  font-family: 'Graphik';
+}
+
+.btn-search{
+  width: 25px;
+  height: auto;
+  position: fixed;
+  float: left;
 }
