@@ -9,22 +9,29 @@
   	<link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="./map.js"></script>
-</head>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4K8qXS8Mf6WLt9wYynT9OIIBrK2COmjw&libraries=places"></script>
+  </head>
+
+
 
   <body>
-      <div id="map"></div>
+      
   
       <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
       <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4K8qXS8Mf6WLt9wYynT9OIIBrK2COmjw&callback=initMap&v=weekly"
-        async
-      ></script>
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4K8qXS8Mf6WLt9wYynT9OIIBrK2COmjw&libraries=places&callback=initAutocomplete"
+        async defer></script>
+
+      <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+      <div id="map"></div>
 
       <div>
         <a href="settings.html" class="btn btn-primary btn-settings">Settings</a>
       </div>
   
-  
+      <!-- Google search maps -->
+      
+
 <container>
     <div class="search-bar">  
       <!-- <input type="text" placeholder="Find your destination"> -->

@@ -248,6 +248,18 @@ i {
   
 }
 
+.search-bar2{
+  height: 2rem;
+  width: 428px;
+  background-color: var(--colour-primary-shade1);
+  float: left;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  bottom: 10rem;
+  position: fixed;
+}
+
 .search-bar input[type=text] {
   background-color: var(--colour-primary-shade2);
   margin-top: 1rem;
@@ -266,4 +278,53 @@ i {
   height: auto;
   position: fixed;
   float: left;
+}
+
+#map {
+  height: 100%;
+}
+
+.controls {
+  margin-top: 10px;
+  border: 1px solid transparent;
+  border-radius: 2px 0 0 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  height: 32px;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#pac-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 12px;
+  padding: 20px 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 300px;
+}
+
+#pac-input:focus {
+  border-color: #4d90fe;
+}
+
+.pac-container {
+  font-family: Roboto;
+}
+
+#type-selector {
+  color: #fff;
+  background-color: #4d90fe;
+  padding: 5px 11px 0px 11px;
+}
+
+#type-selector label {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 300;
+}
+#target {
+  width: 345px;
 }
