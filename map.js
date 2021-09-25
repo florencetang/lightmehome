@@ -3,11 +3,11 @@ let map, infoWindow;
 const citydmap = {
   cityd1: {
     center: { lat: -37.81, lng: 144.9691 },
-    darklevel: 3,
+    darklevel: 1,
   },
   cityd2: {
     center: { lat: -37.85, lng: 145 },
-    darklevel: 2,
+    darklevel: 1,
   },
   cityd3: {
     center: { lat: -37.83, lng: 145 },
@@ -15,6 +15,23 @@ const citydmap = {
   },
   cityd4: {
     center: { lat: -37.83, lng: 144.96 },
+    darklevel: 0.5,
+  },
+
+  cityd5: {
+    center: { lat: 37.816038, lng: 144.965896 },
+    darklevel: 3,
+  },
+  cityd6: {
+    center: { lat: -37.816355, lng: 144.965446 },
+    darklevel: 2,
+  },
+  cityd7: {
+    center: { lat: -37.81669796727798, lng: 144.96556249812917 },
+    darklevel: 1,
+  },
+  cityd8: {
+    center: { lat: -37.816909, lng: 144.966561 },
     darklevel: 0.5,
   },
 }
@@ -28,10 +45,8 @@ function initMap() {
 for (const city in citydmap) {
   // Add the circle for this city to the map.
   const cityCircle = new google.maps.Circle({
-    strokeColor: "#74099e",
-    strokeOpacity: 0.8,
-    strokeWeight: 2,
-    fillColor: "#af48c9",
+    strokeWeight: 0,
+    fillColor: "#8587DC",
     fillOpacity: 0.35,
     map,
     center: citydmap[city].center,
@@ -72,10 +87,13 @@ locationButton.addEventListener("click", () => {
 });
 
   const walkPlanCoordinates = [
-  { lat: -37.83, lng: 144.9691 },
-  { lat: -37.824, lng: 145.002 },
-  { lat: -37.81, lng: 145 },
+  { lat: -37.815779, lng: 144.965337 },
+  { lat: -37.815437, lng: 144.966486 },
+  { lat: -37.817414, lng: 144.967371 },
+  { lat: -37.817587, lng: 144.966762 },
+  { lat: -37.8183, lng: 144.967371 },
 ];
+
 const walkPath = new google.maps.Polyline({
   path: walkPlanCoordinates,
   geodesic: true,

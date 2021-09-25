@@ -20,20 +20,16 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4K8qXS8Mf6WLt9wYynT9OIIBrK2COmjw&libraries=places&callback=initAutocomplete"
       async defer></script>
       <div>
-        <a href="settings.html" class="btn btn-primary btn-settings">Settings</a>
+        <a href="" class="btn btn-primary btn-settings"><img src="img/addlight.svg" alt="addlight"  class="btn-search"></a>
+      </a>
       </div>
      
-<container class="search-bar">
-   
     <div class="search-bar">  
-      <input id="pac-input" class="controls" type="text" placeholder="Find your destination"/>
-      <!-- <a href="searchactive.html">
+      <input id="pac-input" class="controls" type="text" placeholder="Search your destination" style="top: 20rem; position:fixed; z-index: 1;"/>
+      <a href="searchactive.html">
         <img src="img/search.svg" alt="search"  class="btn-search">
-      </a> -->
-  <!-- <input id="searchQueryInput" type="text" name="searchQueryInput" placeholder="Find your destination" value="" /> -->
-  
-  </div>
-</container>
+      </a>
+    </div>
 
  <container>
     <div class="menu">
@@ -44,20 +40,24 @@
    
     <table>
       <tr>
-        <td style="height:66px;">
+        <td style="height:100px;">
           <button class="head-button-size">
                 <div style="text-align:center">
-                  <img class="menu-img" src="img/contact.svg" alt="contact"  class="btn-search">
+                  <a href="contact.html" class="btn">
+                    <img class="menu-img" src="img/contact.svg" alt="contact"  class="btn-search">
+                  </a>
                   <br>
                   <span class="head-mini-text">Contact</span>
                   </div>
                 </div>
               </button>
         </td>
-        <td style="height:66px;">
+        <td style="height:100px;">
           <button class="head-button-size">
                 <div style="text-align:center">
-                  <img class="menu-img" src="img/route.svg" alt="contact"  class="btn-search">
+                  <a href="index.html" class="btn">
+                    <img class="menu-img" src="img/route.svg" alt="contact"  class="btn-search">
+                  </a>
                   <br>
                   <span class="head-mini-text">Route</span>
                   </div>
@@ -65,10 +65,12 @@
               </button>
         </td>
 
-        <td style="height:66px;">
+        <td style="height:100px;">
           <button class="head-button-size">
                 <div style="text-align:center">
-                  <img class="menu-img" src="img/sounds.svg" alt="contact"  class="btn-search">
+                  <a href="sounds.html" class="btn">
+                    <img class="menu-img" src="img/sounds.svg" alt="contact"  class="btn-search">
+                  </a>
                   <br>
                   <span class="head-mini-text">Sounds</span>
                   </div>
