@@ -185,6 +185,7 @@ i {
 /* UI ELEMENTS */
 /* BUTTONS */
 .btn {
+  content: "";
   font-family: 'Graphik';
   font-size: var(--text-sm);
   padding: 0rem var(--space-lg);
@@ -198,6 +199,7 @@ i {
 .btn-primary {
   background-color: var(--colour-accent-shade1);
   color: var(--colour-primary-shade1);
+  display: block;
 }
 
 .btn-text {
