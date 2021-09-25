@@ -41,11 +41,83 @@
 
 let map, infoWindow;
 
+const citydmap = {
+  cityd1: {
+    center: { lat: -37.8180, lng: 144.9691 },
+    darklevel: 3,
+  },
+  cityd2: {
+    center: { lat: -37.85, lng: 145 },
+    darklevel: 2,
+  },
+  cityd3: {
+    center: { lat: -37.83, lng: 145 },
+    darklevel: 1,
+  },
+  cityd4: {
+    center: { lat: -37.83, lng: 144.96 },
+    darklevel: 0.5,
+  },
+}
+
+const citylmap = {
+  cityl1: {
+    center: { lat: -37.83, lng: 144.9691 },
+    numlights: 5,
+  },
+  cityl2: {
+    center: { lat: -37.87, lng: 145 },
+    numlights: 9,
+  },
+  cityl3: {
+    center: { lat: -37.81, lng: 145 },
+    numlights: 20,
+  },
+  cityl4: {
+    center: { lat: -37.85, lng: 144.96 },
+    numlights: 14,
+  },
+};
+
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: -37.8180, lng: 144.9691 },
-    zoom: 12,
+    zoom: 13,
   });
+
+//   addMarker({
+//     coordinates:{lat: -37.83, lng: -144.96},
+//     iconImage:'https://img.icons8.com/fluent/48/000000/marker-storm.png',
+//     content:'<h4>Brooklyn Marker</h4>'
+//  });
+
+for (const city in citydmap) {
+  // Add the circle for this city to the map.
+  const cityCircle = new google.maps.Circle({
+    strokeColor: "#74099e",
+    strokeOpacity: 0.8,
+    strokeWeight: 2,
+    fillColor: "#af48c9",
+    fillOpacity: 0.35,
+    map,
+    center: citydmap[city].center,
+    radius: Math.sqrt(citydmap[city].darklevel) * 100,
+  });
+}
+
+for (const city in citylmap) {
+  // Add the circle for this city to the map.
+  const cityCircle = new google.maps.Circle({
+    strokeColor: "#FDBB30",
+    strokeOpacity: 0.8,
+    strokeWeight: 2,
+    fillColor: "#FDBB30",
+    fillOpacity: 0.35,
+    map,
+    center: citylmap[city].center,
+    radius: Math.sqrt(citylmap[city].numlights) * 100,
+  });
+
   infoWindow = new google.maps.InfoWindow();
 
   const locationButton = document.createElement("button");
@@ -78,6 +150,7 @@ function initMap() {
     }
   });
 }
+  
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   infoWindow.setPosition(pos);
@@ -87,4 +160,6 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
       : "Error: Your browser doesn't support geolocation."
   );
   infoWindow.open(map);
+}
+
 }
