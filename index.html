@@ -15,33 +15,23 @@
 
 
   <body>
-      
-  
-      <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-      <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4K8qXS8Mf6WLt9wYynT9OIIBrK2COmjw&libraries=places&callback=initAutocomplete"
-        async defer></script>
-
-      <input id="pac-input" class="controls" type="text" placeholder="Search Box">
       <div id="map"></div>
-
+      <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4K8qXS8Mf6WLt9wYynT9OIIBrK2COmjw&libraries=places&callback=initAutocomplete"
+      async defer></script>
       <div>
         <a href="settings.html" class="btn btn-primary btn-settings">Settings</a>
       </div>
-  
-      <!-- Google search maps -->
-      
-
-<container>
+     
+<container class="search-bar">
+   
     <div class="search-bar">  
-      <!-- <input type="text" placeholder="Find your destination"> -->
-      <a href="searchactive.html">
+      <input id="pac-input" class="controls" type="text" placeholder="Find your destination"/>
+      <!-- <a href="searchactive.html">
         <img src="img/search.svg" alt="search"  class="btn-search">
-      </a>
-  <input id="searchQueryInput" type="text" name="searchQueryInput" placeholder="Find your destination" value="" />
-    
-        
-
+      </a> -->
+  <!-- <input id="searchQueryInput" type="text" name="searchQueryInput" placeholder="Find your destination" value="" /> -->
+  
   </div>
 </container>
 

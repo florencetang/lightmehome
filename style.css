@@ -245,32 +245,6 @@ i {
   align-items: center;
   bottom: 5rem;
   position: fixed;
-  
-}
-
-.search-bar2{
-  height: 2rem;
-  width: 428px;
-  background-color: var(--colour-primary-shade1);
-  float: left;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  bottom: 10rem;
-  position: fixed;
-}
-
-.search-bar input[type=text] {
-  background-color: var(--colour-primary-shade2);
-  margin-top: 1rem;
-  width: 100%;
-  height: 2.8rem;
-  float: left;
-  border: 1px;
-  font-size: 17px;
-  border-radius: 1.625rem;
-  padding: 0 3.5rem 0 1.5rem;
-  font-family: 'Graphik';
 }
 
 .btn-search{
@@ -285,25 +259,33 @@ i {
 }
 
 .controls {
-  margin-top: 10px;
-  border: 1px solid transparent;
+  height: 2rem;
+  width: 428px;
+  background-color: var(--colour-primary-shade1);
+  bottom: 5rem;
+  position: fixed;
   border-radius: 2px 0 0 2px;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  height: 32px;
   outline: none;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  display: block;
+  left: 0;
+  /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); */
 }
 
 #pac-input {
-  background-color: #fff;
-  font-family: Roboto;
-  font-size: 15px;
+  background-color: var(--colour-primary-shade2);
+  font-family: 'Graphik';
+  font-size: 17px;
+  border-radius: 1.625rem;
   font-weight: 300;
+  height: 2.8rem;
   margin-left: 12px;
   padding: 20px 11px 0 13px;
   text-overflow: ellipsis;
-  width: 300px;
+  float: left;
+  border: 1px;
+  width: 100%;
+  padding: 0 3.5rem 0 1.5rem;
+  bottom: 0;
 }
 
 #pac-input:focus {
