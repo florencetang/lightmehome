@@ -218,10 +218,28 @@ i {
   float: right;
 }
 
-
-
 .btn-primary:hover{
   background: var(--colour-accent-shade2);
+}
+
+.head-button-size {
+  background-color: white;
+  height: 66px;
+  width: 9rem;
+  border-radius: 20px;
+  border: none;
+  padding-top: 1.2rem;
+}
+
+.head-material {
+  color: var(--colour-black);
+  font-size: 50px;
+}
+
+.head-mini-text {
+  color: var(--colour-black);
+  font-family: 'Arial Narrow', 'Helvetica Neue', 'Arial';
+  font-size: 12px;
 }
 
 /*SEARCH*/
