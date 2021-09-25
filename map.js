@@ -24,7 +24,7 @@ let map, infoWindow;
 
 const citydmap = {
   cityd1: {
-    center: { lat: -37.8180, lng: 144.9691 },
+    center: { lat: -37.81, lng: 144.9691 },
     darklevel: 3,
   },
   cityd2: {
