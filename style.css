@@ -1,0 +1,237 @@
+/* CSS RESET
+
+   http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* CSS RESET END */
+/* CSS */
+html, body {
+  font-family: 'Graphik', sans-serif;
+  background-color: var(--colour-primary-shade2);
+  max-width: 428px;
+  min-width: 428px;
+  min-height: 926px;
+  max-height: 926px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 3.5rem;
+  margin-top: 0;
+}
+
+/* MAP */
+/* Always set the map height explicitly to define the size of the div
+        * element that contains the map. */
+#map {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* TYPOGRAPHY AND COLOURS */
+:root{
+  /* COLOURS */
+  --colour-accent-shade1: #af48c9;
+  --colour-accent-shade2:#74099e;
+  --colour-primary-shade1: #ffffff;
+  --colour-primary-shade2: #fdf5ff;
+  --colour-primary-shade3: #dbdbdb;
+  --colour-primary-shade4: #eadfec;
+  --colour-black: #202020;
+
+/* TYPE SCALE */
+  --text-base-size: 1rem;
+  --text-scale-ratio: 1.2;
+  --text-xs: calc(var(--text-base-size) / var(--text-scale-ratio));
+  --text-sm: calc(var(--text-base-size) / var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-md: calc(var(--text-base-size) * var(--text-scale-ratio));
+  --text-lg: calc(var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-xl: calc(var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-xxl: calc(var(--text-base-size) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+
+/* SPACING */
+  --space-xxxs: 0.25em;
+  --space-xxs: 0.375em;
+  --space-xs: 0.5em;
+  --space-sm: 1em;
+  --space-md: 1.25em;
+  --space-lg: 2em;
+  --space-xl: 2.75em;
+  --space-xxl: 5.25em;
+  --space-xxxl: 7.5em;
+  --space-xxxxl: 10em;
+
+/* LINE WIDTH */
+--width-primary: 1px;
+}
+
+/* TYPOGRAPHY */
+/* FONTS */
+@font-face {
+  font-family: 'Graphik';
+  src: url('font/Graphik-Medium.woff2') format('woff2'),
+      url('font/Graphik-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Graphik';
+  src: url('font/Graphik-Regular.woff2') format('woff2'),
+      url('font/Graphik-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* STYLES */
+h1{
+  font-family: 'Graphik';
+  font-size: var(--text-xl);
+  font-weight: 500;
+  line-height: 125%;
+}
+
+h2{
+  font-family: 'Graphik';
+  font-size: var(--text-lg);
+  font-weight: 500;
+  line-height: 125%;
+}
+
+h3{
+  font-family: 'Graphik';
+  font-size: var(--text-md);
+  font-weight: 500;
+  line-height: 170%;
+}
+
+p{
+  font-family: 'Graphik';
+  font-size: var(--text-sm);
+  line-height: 170%;
+}
+
+i {
+  font-style: italic;
+}
+
+/* UI ELEMENTS */
+/* BUTTONS */
+.btn {
+  font-family: 'Graphik';
+  font-size: var(--text-sm);
+  padding: 0rem var(--space-lg);
+  text-align: center;
+  line-height: 3.3rem;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 3rem;
+}
+
+.btn-primary {
+  background-color: var(--colour-accent-shade1);
+  color: var(--colour-primary-shade1);
+}
+
+.btn-text {
+  float: right;
+  font-size: var(--text-md);
+  padding: 0;
+}
+
+.btn-text-left {
+  float: left;
+}
+
+.btn-settings{
+  position: fixed;
+  right: 0;
+  float: right;
+}
+
+.btn-primary:hover{
+  background: var(--colour-accent-shade2);
+}
+
+/*SEARCH*/
+.menu {
+  overflow: hidden;
+  background-color: var(--colour-primary-shade1);
+  height: 5rem; 
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  vertical-align: middle;
+  z-index: 999;
+  border-top: var(--width-primary) solid var(--colour-black);
+}
+
+.search-bar{
+  height: 5rem; 
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--colour-primary-shade1);
+  float: left;
+  display: block;
+  bottom: 5rem;
+  position: fixed;
+}
+
+.search-bar input[type=text] {
+  width: 100%;
+  float: left;
+  padding: 2rem 2rem;
+  border: none;
+  font-size: 17px;
+}

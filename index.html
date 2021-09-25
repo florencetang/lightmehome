@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Me Home</title>
+
+  	<link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="./map.js"></script>
+</head>
+
+  <body>
+      <div id="map"></div>
+  
+      <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+      <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4K8qXS8Mf6WLt9wYynT9OIIBrK2COmjw&callback=initMap&v=weekly"
+        async
+      ></script>
+
+  <a href="settings.html" class="btn btn-primary btn-settings">Settings</a>
+ 
+  
+<container>
+    <div class="search-bar">  
+      <input type="text" placeholder="Search location...">
+    </div>
+ </container>
+
+ <container>
+    <div class="menu">
+      <a href="contact.html" class="btn btn-primary">Contact</a>
+      <a href="index.html" class="btn btn-primary">Home</a>
+      <a href="sounds.html" class="btn btn-primary">Sounds</a>
+    </div>
+ </container>
+
+</body>
+
+
+</html>
