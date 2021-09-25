@@ -7,44 +7,43 @@
     <title>Light Me Home</title>
 
   	<link rel="stylesheet" type="text/css" href="style.css">
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="./map.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4K8qXS8Mf6WLt9wYynT9OIIBrK2COmjw&libraries=places"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4K8qXS8Mf6WLt9wYynT9OIIBrK2COmjw&libraries=places&sensor=false"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+   
   </head>
 
-
-
-  <body>
+  <body onLoad="initialize()">
+  </div><button id="drop" onClick="addMyMarker()">Drop Markers</button>
       <div id="map"></div>
       <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4K8qXS8Mf6WLt9wYynT9OIIBrK2COmjw&libraries=places&callback=initAutocomplete"
       async defer></script>
-      <div>
-        <a href="" class="btn btn-primary btn-settings"><img src="img/addlight.svg" alt="addlight"  class="btn-search"></a>
-      </a>
+      
       </div>
-     
-    <div class="search-bar">  
-      <input id="pac-input" class="controls" type="text" placeholder="Search your destination" style="top: 20rem; position:fixed; z-index: 1;"/>
-      <a href="searchactive.html">
-        <img src="img/search.svg" alt="search"  class="btn-search">
-      </a>
-    </div>
-
+  
+      <container>
+        <div class="search-bar">  
+          <input id="pac-input" class="controls" type="text" placeholder="Search your destination" style="top: 20rem; position:fixed; z-index: 1;">
+            <a href="searchactive.html">
+              <img src="img/search.svg" alt="search">
+            </a>
+          </input>
+          <div>
+            <a href="" class="btn btn-addlight"><img src="img/addlight.svg" alt="addlight"></a>
+          </a>
+        </div>
+      </container>
+    
  <container>
-    <div class="menu">
-      <!-- <a href="contact.html" class="btn"><img src="img/contact.svg" alt="contact"  class="btn-search">Contact</a>
-      <a href="index.html" class="btn"><img src="img/route.svg" alt="route"  class="btn-search">Route</a>
-      <a href="sounds.html" class="btn"><img src="img/sounds.svg" alt="sounds"  class="btn-search">Sounds</a>
-    </div> -->
-   
+    <div class="menu">  
     <table>
       <tr>
         <td style="height:100px;">
           <button class="head-button-size">
                 <div style="text-align:center">
                   <a href="contact.html" class="btn">
-                    <img class="menu-img" src="img/contact.svg" alt="contact"  class="btn-search">
+                    <img class="menu-img" src="img/contact.svg" alt="contact">
                   </a>
                   <br>
                   <span class="head-mini-text">Contact</span>
@@ -56,7 +55,7 @@
           <button class="head-button-size">
                 <div style="text-align:center">
                   <a href="index.html" class="btn">
-                    <img class="menu-img" src="img/route.svg" alt="contact"  class="btn-search">
+                    <img class="menu-img" src="img/route.svg" alt="contact">
                   </a>
                   <br>
                   <span class="head-mini-text">Route</span>
@@ -69,7 +68,7 @@
           <button class="head-button-size">
                 <div style="text-align:center">
                   <a href="sounds.html" class="btn">
-                    <img class="menu-img" src="img/sounds.svg" alt="contact"  class="btn-search">
+                    <img class="menu-img" src="img/sounds.svg" alt="contact">
                   </a>
                   <br>
                   <span class="head-mini-text">Sounds</span>
@@ -79,7 +78,6 @@
         </td>
       </tr>
     </table>
-
  </container>
 
  

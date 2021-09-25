@@ -8,40 +8,128 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <container>
-        <h1>Contact</h1>
+    <container class="contact">
+        <h1>Emergency Contacts</h1>
 
-        <h3>Emergency</h3>
-        <p>000</p>
+        <container class="contact-box emergency">
+          <div class="contact-info">
+            <h3>Emergency</h3>
+            <p>000</p>
+          </div>
+
+          <div class="btn-emergency-contact">
+            <a href="https://www.triplezero.gov.au/" class="btn">
+              <img class="menu-img" src="img/contact.svg" alt="contact">
+            </a>
+          </div>
+        </container>
+
+        <container class="contact-box">
+          <div class="contact-info">
+            <h3>Cab Services</h3>
+            <p>113 2227</p>
+          </div>
+
+          <div class="btn-contact">
+            <a href="https://www.triplezero.gov.au/" class="btn">
+              <img class="menu-img" src="img/contact.svg" alt="contact">
+            </a>
+          </div>
+        </container>
+
+        <container class="contact-box">
+          <div class="contact-info">
+            <h3>Mum</h3>
+           <p>0412328289</p>
+
+          </div>
+
+          <div class="btn-contact">
+            <a href="https://www.triplezero.gov.au/" class="btn">
+              <img class="menu-img" src="img/contact.svg" alt="contact">
+            </a>
+          </div>
+        </container>
         
-        <h3>Cab Services</h3>
-        <p>000</p>
-
-        <h3>Mum</h3>
-        <p>0412328289</p>
-
-        <h3>Dad</h3>
+        <container class="contact-box">
+          <div class="contact-info">
+            <h3>Dad</h3>
         <p>04232882899</p>
 
-        <h3>John</h3>
+          </div>
+
+          <div class="btn-contact">
+            <a href="https://www.triplezero.gov.au/" class="btn">
+              <img class="menu-img" src="img/contact.svg" alt="contact">
+            </a>
+          </div>
+        </container>
+        
+        <container class="contact-box">
+          <div class="contact-info">
+            <h3>John</h3>
         <p>0412328679</p>
+
+          </div>
+
+          <div class="btn-contact">
+            <a href="https://www.triplezero.gov.au/" class="btn">
+              <img class="menu-img" src="img/contact.svg" alt="contact">
+            </a>
+          </div>
+        </container>
+        
+        
+
+        
     </container>
 
 
 <!-- ADD MENU BAR -->
 <container>
-    <div class="search-bar">  
-      <input type="text" placeholder="Search location...">
-    </div>
- </container>
+  <div class="menu">  
+  <table>
+    <tr>
+      <td style="height:100px;">
+        <button class="head-button-size">
+              <div style="text-align:center">
+                <a href="contact.html" class="btn">
+                  <img class="menu-img" src="img/contact.svg" alt="contact">
+                </a>
+                <br>
+                <span class="head-mini-text">Contact</span>
+                </div>
+              </div>
+            </button>
+      </td>
+      <td style="height:100px;">
+        <button class="head-button-size">
+              <div style="text-align:center">
+                <a href="index.html" class="btn">
+                  <img class="menu-img" src="img/route.svg" alt="contact">
+                </a>
+                <br>
+                <span class="head-mini-text">Route</span>
+                </div>
+              </div>
+            </button>
+      </td>
 
- <container>
-    <div class="menu">
-      <a href="contact.html" class="btn btn-primary">Contact</a>
-      <a href="index.html" class="btn btn-primary">Home</a>
-      <a href="sounds.html" class="btn btn-primary">Sounds</a>
-    </div>
- </container>
+      <td style="height:100px;">
+        <button class="head-button-size">
+              <div style="text-align:center">
+                <a href="sounds.html" class="btn">
+                  <img class="menu-img" src="img/sounds.svg" alt="contact">
+                </a>
+                <br>
+                <span class="head-mini-text">Sounds</span>
+                </div>
+              </div>
+            </button>
+      </td>
+    </tr>
+  </table>
+</container>
 
 </body>
 </html>

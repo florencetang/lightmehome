@@ -3,11 +3,11 @@ let map, infoWindow;
 const citydmap = {
   cityd1: {
     center: { lat: -37.81, lng: 144.9691 },
-    darklevel: 1,
+    darklevel: 0.05,
   },
   cityd2: {
     center: { lat: -37.85, lng: 145 },
-    darklevel: 1,
+    darklevel: 2,
   },
   cityd3: {
     center: { lat: -37.83, lng: 145 },
@@ -20,110 +20,76 @@ const citydmap = {
 
   cityd5: {
     center: { lat: 37.816038, lng: 144.965896 },
-    darklevel: 3,
+    darklevel: 0.2,
   },
   cityd6: {
     center: { lat: -37.816355, lng: 144.965446 },
-    darklevel: 2,
+    darklevel: 0.02,
   },
   cityd7: {
     center: { lat: -37.81669796727798, lng: 144.96556249812917 },
-    darklevel: 1,
+    darklevel: 0.01,
   },
   cityd8: {
     center: { lat: -37.816909, lng: 144.966561 },
-    darklevel: 0.5,
+    darklevel: 0.005,
   },
-}
-
-function initMap() {
-  map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: -37.8180, lng: 144.9691 },
-    zoom: 13,
-  });
-
-for (const city in citydmap) {
-  // Add the circle for this city to the map.
-  const cityCircle = new google.maps.Circle({
-    strokeWeight: 0,
-    fillColor: "#8587DC",
-    fillOpacity: 0.35,
-    map,
-    center: citydmap[city].center,
-    radius: Math.sqrt(citydmap[city].darklevel) * 100,
-  });
-}
-
-  infoWindow = new google.maps.InfoWindow();
-
-  const locationButton = document.createElement("button");
-
-locationButton.textContent = "Pan to Current Location";
-locationButton.classList.add("custom-map-control-button");
-map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
-locationButton.addEventListener("click", () => {
-  // Try HTML5 geolocation.
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        const pos = {
-          lat: position.coords.latitude,
-          lng: position.coords.longitude,
-        };
-
-        infoWindow.setPosition(pos);
-        infoWindow.setContent("Location found.");
-        infoWindow.open(map);
-        map.setCenter(pos);
-      },
-      () => {
-        handleLocationError(true, infoWindow, map.getCenter());
-      }
-    );
-  } else {
-    // Browser doesn't support Geolocation
-    handleLocationError(false, infoWindow, map.getCenter());
-  }
-});
-
-  const walkPlanCoordinates = [
-  { lat: -37.815779, lng: 144.965337 },
-  { lat: -37.815437, lng: 144.966486 },
-  { lat: -37.817414, lng: 144.967371 },
-  { lat: -37.817587, lng: 144.966762 },
-  { lat: -37.8183, lng: 144.967371 },
-];
-
-const walkPath = new google.maps.Polyline({
-  path: walkPlanCoordinates,
-  geodesic: true,
-  strokeColor: "lightgreen",
-  strokeOpacity: 1.0,
-  strokeWeight: 4,
-});
-
-walkPath.setMap(map);
+  cityd9: {
+    center: { lat:  -37.813681, lng: 144.967334 },
+    darklevel: 0.02,
+  },
+  cityd10: {
+    center: { lat: -37.811936, lng: 144.968378 },
+    darklevel: 0.02,
+  },
+  cityd11: {
+    center: { lat: -37.813035, lng: 144.971900 },
+    darklevel: 0.01,
+  },
+  cityd12: {
+    center: { lat: -37.813998, lng: 144.966999 },
+    darklevel: 0.005,
+  },
+  cityd13: {
+    center: { lat: -37.817328, lng: 144.965451 },
+    darklevel: 0.02,
+  },
+  cityd14: {
+    center: { lat: -37.817661, lng: 144.963958 },
+    darklevel: 0.02,
+  },
+  cityd15: {
+    center: { lat: -37.818585, lng: 144.964300 },
+    darklevel: 0.01,
+  },
+  cityd16: {
+    center: { lat: -37.814506, lng: 144.969529 },
+    darklevel: 0.005,
+  },
 
 }
-
-
-function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-infoWindow.setPosition(pos);
-infoWindow.setContent(
-  browserHasGeolocation
-    ? "Error: The Geolocation service failed."
-    : "Error: Your browser doesn't support geolocation."
-);
-infoWindow.open(map);
-}
-
-
 // SEARCH
+
+// var mapCenter = new google.maps.LatLng();
+// var Map
+// function initialize()
+// {
+//   function addMyMarker() { //function that will add markers on button click
+//     var marker = new google.maps.Marker({
+//       position:mapCenter,
+//       map: map,
+//         draggable:true,
+//         animation: google.maps.Animation.DROP,
+//       title:"This a new marker!",
+//             icon: "http://maps.google.com/mapfiles/ms/micons/blue.png"
+//     });
+//   }
+// }
 
 function initAutocomplete() {
   var map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: -37.8180, lng: 144.9691},
-    zoom: 13,
+    center: {lat: -37.8178, lng: 144.9669},
+    zoom: 17,
     mapTypeId: 'roadmap'
   });
 
@@ -190,11 +156,9 @@ function initAutocomplete() {
 for (const city in citydmap) {
   // Add the circle for this city to the map.
   const cityCircle = new google.maps.Circle({
-    strokeColor: "#74099e",
-    strokeOpacity: 0.8,
-    strokeWeight: 2,
-    fillColor: "#af48c9",
-    fillOpacity: 0.35,
+    strokeWeight: 0,
+    fillColor: "#8587DC",
+    fillOpacity: 0.4,
     map,
     center: citydmap[city].center,
     radius: Math.sqrt(citydmap[city].darklevel) * 100,
@@ -205,7 +169,7 @@ for (const city in citydmap) {
 
   const locationButton = document.createElement("button");
 
-locationButton.textContent = "Pan to Current Location";
+locationButton.textContent = "Current Location";
 locationButton.classList.add("custom-map-control-button");
 map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
 locationButton.addEventListener("click", () => {
@@ -219,7 +183,7 @@ locationButton.addEventListener("click", () => {
         };
 
         infoWindow.setPosition(pos);
-        infoWindow.setContent("Location found.");
+        infoWindow.setContent("You are here");
         infoWindow.open(map);
         map.setCenter(pos);
       },
@@ -234,22 +198,22 @@ locationButton.addEventListener("click", () => {
 });
 
   const walkPlanCoordinates = [
-  { lat: -37.83, lng: 144.9691 },
-  { lat: -37.824, lng: 145.002 },
-  { lat: -37.81, lng: 145 },
+    { lat: -37.815779, lng: 144.965337 },
+    { lat: -37.815437, lng: 144.966486 },
+    { lat: -37.817414, lng: 144.967371 },
+    { lat: -37.817587, lng: 144.966762 },
+    { lat: -37.8183, lng: 144.967371 },
+
 ];
 const walkPath = new google.maps.Polyline({
   path: walkPlanCoordinates,
   geodesic: true,
-  strokeColor: "lightgreen",
+  strokeColor: "#90DE2C",
   strokeOpacity: 1.0,
   strokeWeight: 4,
 });
 
 walkPath.setMap(map);
-
-}
-
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 infoWindow.setPosition(pos);
@@ -259,4 +223,5 @@ infoWindow.setContent(
     : "Error: Your browser doesn't support geolocation."
 );
 infoWindow.open(map);
+}
 }
