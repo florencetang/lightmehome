@@ -208,7 +208,7 @@ locationButton.addEventListener("click", () => {
 const walkPath = new google.maps.Polyline({
   path: walkPlanCoordinates,
   geodesic: true,
-  strokeColor: "#90DE2C",
+  strokeColor: "#03C05A",
   strokeOpacity: 1.0,
   strokeWeight: 4,
 });
