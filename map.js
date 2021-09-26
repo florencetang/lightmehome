@@ -215,6 +215,27 @@ const walkPath = new google.maps.Polyline({
 
 walkPath.setMap(map);
 
+const walkPlanCoordinates2 = [
+  { lat: -37.815779, lng: 144.965337 },
+  { lat: -37.815653, lng: 144.965742 },
+  { lat: -37.816723, lng: 144.966183 },
+  { lat: -37.816826873472706, lng: 144.96556590454867 },
+  { lat: -37.816826873472706, lng: 144.96556590454867 },
+  { lat: -37.817577, lng: 144.966767 },
+  { lat: -37.8183, lng: 144.967371 },
+];
+const walkPath2 = new google.maps.Polyline({
+path: walkPlanCoordinates2,
+geodesic: true,
+strokeColor: "#F95247",
+strokeOpacity: 1.0,
+strokeWeight: 4,
+});
+
+walkPath2.setMap(map);
+
+
+
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 infoWindow.setPosition(pos);
 infoWindow.setContent(
